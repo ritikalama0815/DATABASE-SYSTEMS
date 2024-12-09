@@ -1,0 +1,401 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+  }
+  
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fc3b3b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+    margin-bottom: 10px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  .nav a + .donate-btn {
+    margin-left: 15px;
+    margin-top: -7px;
+  }
+  
+  .donate-btn {
+    background-color: #604b79;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .donate-btn:hover {
+    background-color: #3e1d60;
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    width: 100%;
+    height: 57vh;
+    margin: 20px auto;
+    text-align: center;
+    background-image: url('C:\Users\ritik\OneDrive\Desktop\CS430 BOMB copy 2\frontend\src\assets\images\donating-blood.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+  }
+  
+  .hero h1 {
+    font-size: clamp(24px, 8vw, 60px); /* Scales between 24px and 60px based on the viewport width */
+    margin: 0;
+    color: rgb(255, 255, 255); /* Adjust text color for better visibility */
+    text-shadow: 0 0 3px #e7e7e7, 0 0 5px #000000;
+  }
+  
+  .hero p {
+    font-size: clamp(16px, 4vw, 30px); /* Scales between 16px and 30px */
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    text-shadow: 0 0 3px #e7e7e7, 0 0 5px #000000;
+  }
+  
+  .hero-buttons button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .register-receiver {
+    background-color: rgb(234, 234, 234);
+    color: #e53935;
+    font-weight: bold;
+    border: 2px solid white;
+  }
+  
+  .register-receiver:hover {
+    background-color: #624380;
+    color: #fff;
+  }
+  
+  .register-donor {
+    background-color: rgb(234, 234, 234);
+    color: #e53935;
+    font-weight: bold;
+    border: 2px solid white;
+  }
+  
+  .register-donor:hover {
+    background-color: #624380;
+    color: #fff;
+  }
+  
+  /* Info Section */
+  .info-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .info-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .tab {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .tab:hover {
+    background-color: #e53935; /* Change this to your desired hover background color */
+    color: #fff;
+  }
+  .tab.active {
+    background-color: #9c4221;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  
+  .info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .info-box h3 {
+  text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .info-box ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style-type: disc;
+  }
+  
+  .info-box ul li {
+    margin-bottom: 10px;
+  }
+  
+  .clickable {
+    cursor: pointer;
+    color: #9c4221;
+    font-weight: bold;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  .popup-content {
+    position: relative;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .popup p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #a33f27;
+  }
+  
+  /* Overlay */
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Show Popup and Overlay */
+  .popup-visible .popup,
+  .popup-visible .popup-overlay {
+    display: block;
+  }
+  
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #5c5c5c;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    color: white;
+  }
+  
+  .social-links li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+  }
+  
+  .footer-bottom p{
+    color: white;
+  }
+
+  .social-links {
+    list-style: none; 
+    padding: 0;
+    margin-left: 60px;
+    display: flex; 
+    gap: 20px; 
+  }
+  .social-links li {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .social-links a {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none !important; 
+    color: #333; 
+    font-size: 32px; 
+  }
+  
+  .social-links i {
+    margin-right: 0; /* No space between icon and text */
+  }
+  
+  .social-links a:hover i {
+    transform: scale(1.5); 
+    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
+  }
+  .social-links a:hover .fa-facebook {
+    color: #2c88ff; /* Facebook blue */
+  }
+  
+  .social-links a:hover .fa-twitter {
+    color: #1da1f2; /* Twitter light blue */
+  }
+  
+  .social-links a:hover .fa-instagram {
+    color: #e4405f; /* Instagram pink */
+  }
+  
+  .testimonials-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(94, 69, 69, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonials-content {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border: 1px solid #686868;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+  }
+  
+  .close-btn {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .testimonials-list {
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-form textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }

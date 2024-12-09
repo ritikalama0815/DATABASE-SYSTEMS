@@ -1,0 +1,145 @@
+/* Container styling */
+.p-6 {
+    padding: 1.5rem;
+}
+
+.max-w-4xl {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Headings and Text */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #f7fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 1rem;
+    background-color: #882220;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #e53935;
+}
+
+/* Donor List Section */
+.donors-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Two columns */
+    gap: 1.5rem; /* Space between columns */
+}
+
+/* Individual Donor Item */
+.donor-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #edf2f7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Donor Info */
+.donor-info p {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.donor-name {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.donor-type {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.donor-type.blood {
+    background-color: #fbd38d;
+    color: #9c4221;
+}
+
+.donor-type.organ {
+    background-color: #d6bcfa;
+    color: #6b46c1;
+}
+
+.health-status {
+    font-weight: bold;
+}
+
+.text-green-500 {
+    color: #48bb78;
+}
+
+.text-red-500 {
+    color: #f56565;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+/* Mobile responsiveness: 1-column layout for small screens */
+@media (max-width: 768px) {
+    .donors-list {
+        grid-template-columns: 1fr; /* Switch to 1 column on smaller screens */
+    }
+}
